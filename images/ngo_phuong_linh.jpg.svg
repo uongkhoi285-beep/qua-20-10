@@ -1,0 +1,22 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="grad7" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0c3fc" />
+      <stop offset="100%" stop-color="#8ec5fc" />
+    </linearGradient>
+    <radialGradient id="sparkle" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#grad7)" />
+  <circle cx="200" cy="200" r="160" fill="none" stroke="#ffd700" stroke-width="4" stroke-dasharray="8 6"/>
+  <circle cx="200" cy="200" r="145" fill="rgba(255, 255, 255, 0.25)" />
+  <text x="200" y="165" font-size="75" text-anchor="middle" dominant-baseline="middle">✨</text>
+  <text x="200" y="240" font-family="'Cinzel', 'Playfair Display', serif" font-size="28" font-weight="bold" fill="#320c57" text-anchor="middle" dominant-baseline="middle">Ngô Phương Linh</text>
+  <text x="200" y="278" font-family="'Quicksand', sans-serif" font-size="16" font-weight="bold" fill="#7b2cbf" text-anchor="middle" dominant-baseline="middle">A3K33 • 20/10</text>
+  <circle cx="70" cy="80" r="15" fill="url(#sparkle)"/>
+  <circle cx="330" cy="90" r="12" fill="url(#sparkle)"/>
+  <circle cx="80" cy="320" r="10" fill="url(#sparkle)"/>
+  <circle cx="320" cy="310" r="16" fill="url(#sparkle)"/>
+</svg>

@@ -1,0 +1,1656 @@
+/* ====================================================================
+   THEME: DISNEY FAIRY TALE 3D PURPLE - 20/10 A3K33
+   ĐỒNG BỘ 100% CHỮ VIẾT TAY NGHỆ THUẬT (CALLIGRAPHY & HANDWRITING)
+   ==================================================================== */
+
+:root {
+  --bg-deep: #0f051d;
+  --bg-purple-1: #1a0836;
+  --bg-purple-2: #2e0854;
+  --bg-purple-3: #4a1575;
+  --bg-purple-light: #7b2cbf;
+  --accent-gold: #ffd700;
+  --accent-gold-light: #fff2a6;
+  --accent-gold-dark: #b8860b;
+  --accent-pink: #ff758c;
+  --accent-cyan: #70e1ff;
+  --text-light: #ffffff;
+  --text-cream: #fff8e7;
+  --text-gold: #ffeaa7;
+  --border-gold: linear-gradient(135deg, #ffd700, #ffb300, #fff2a6, #d4af37);
+  --shadow-purple: 0 10px 30px rgba(123, 44, 191, 0.4);
+  --shadow-gold: 0 0 25px rgba(255, 215, 0, 0.5);
+  
+  /* Đồng bộ font chữ viết tay toàn trang web */
+  --font-handwriting: 'Dancing Script', 'Caveat', cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-handwriting) !important;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-deep);
+  color: var(--text-cream);
+  font-family: var(--font-handwriting);
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Background Galaxy */
+body {
+  background: radial-gradient(circle at 50% 10%, #3e126d 0%, #1a0836 45%, #0c0217 90%);
+  background-attachment: fixed;
+}
+
+/* Canvas Particle Layer */
+#starCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Disney Fairy Tale 3D Ornamental Borders */
+.disney-border-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  box-shadow: inset 0 0 80px rgba(123, 44, 191, 0.6),
+              inset 0 0 20px rgba(255, 215, 0, 0.4);
+}
+
+.disney-corner {
+  position: fixed;
+  width: 110px;
+  height: 110px;
+  pointer-events: none;
+  z-index: 3;
+  opacity: 0.85;
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.7));
+  transition: transform 0.5s ease;
+}
+.disney-corner.top-left { top: 10px; left: 10px; }
+.disney-corner.top-right { top: 10px; right: 10px; transform: scaleX(-1); }
+.disney-corner.bottom-left { bottom: 10px; left: 10px; transform: scaleY(-1); }
+.disney-corner.bottom-right { bottom: 10px; right: 10px; transform: scale(-1); }
+
+/* Main Wrapper */
+.main-wrapper {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 30px 20px 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ====================================================================
+   SECTION 1: INTRO DISNEY CALLIGRAPHY
+   (Đã tạo khoảng cách thoáng đãng, không có bất kỳ vật gì đè lên chữ XIN)
+   ==================================================================== */
+.intro-section {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  position: relative;
+  width: 100%;
+}
+
+.disney-header-sparkle-arc {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 45px;
+}
+
+.shooting-arc-svg {
+  width: 320px;
+  height: 55px;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.arc-path {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: drawArc 3.5s ease-in-out infinite alternate;
+}
+
+@keyframes drawArc {
+  0% { stroke-dashoffset: 600; opacity: 0.2; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 0.85; }
+}
+
+/* Subtitle */
+.intro-subtitle {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--accent-gold-light);
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Handwriting Disney Title: "xin chào các bóng hồng của a3k33" */
+.disney-handwriting-title {
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 15px 0 18px 0;
+  letter-spacing: 2px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #fff7d6 0%, #ffd700 30%, #ffffff 50%, #fdbb2d 75%, #d18aff 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.7))
+          drop-shadow(0 0 20px rgba(255, 215, 0, 0.6))
+          drop-shadow(0 0 35px rgba(186, 104, 200, 0.5));
+  text-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+  position: relative;
+  display: inline-block;
+  user-select: none;
+}
+
+.magic-wand-tip {
+  display: inline-block;
+  font-size: 2.2rem;
+  vertical-align: middle;
+  margin-left: 6px;
+  animation: wandFlicker 0.4s infinite alternate;
+  filter: drop-shadow(0 0 12px #ffd700);
+  transition: opacity 0.4s ease;
+  user-select: none;
+}
+
+@keyframes wandFlicker {
+  0% { transform: scale(0.9) rotate(-15deg); }
+  100% { transform: scale(1.3) rotate(20deg); }
+}
+
+.finished-writing {
+  animation: goldenGlowPulse 3s infinite alternate, shimmerText 5s linear infinite !important;
+}
+
+@keyframes goldenGlowPulse {
+  0% { filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.6)) drop-shadow(0 0 25px rgba(186, 104, 200, 0.5)); }
+  100% { filter: drop-shadow(0 0 30px rgba(255, 215, 0, 0.95)) drop-shadow(0 0 50px rgba(230, 160, 255, 0.8)); }
+}
+
+@keyframes shimmerText {
+  to { background-position: 200% center; }
+}
+
+.intro-date-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(90deg, rgba(123, 44, 191, 0.45), rgba(255, 215, 0, 0.25), rgba(123, 44, 191, 0.45));
+  border: 1.5px solid rgba(255, 215, 0, 0.55);
+  border-radius: 25px;
+  padding: 6px 24px;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #fff;
+  box-shadow: 0 0 18px rgba(255, 215, 0, 0.3);
+}
+
+/* ====================================================================
+   SECTION 2: CLASS PHOTO FRAME (KHOẢNG TRỐNG GIỮA INTRO & BĂNG CHUYỀN)
+   ==================================================================== */
+.class-photo-section {
+  width: 100%;
+  max-width: 920px;
+  margin: 30px 0 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.royal-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.gold-line {
+  height: 2px;
+  width: 70px;
+  background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+}
+
+.royal-section-title {
+  color: var(--accent-gold-light);
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
+}
+
+.class-photo-container {
+  width: 100%;
+  background: linear-gradient(145deg, rgba(38, 12, 69, 0.85), rgba(20, 6, 38, 0.95));
+  border: 3px solid transparent;
+  border-image: linear-gradient(135deg, #ffd700, #b8860b, #ffecb3, #8a2be2, #ffd700) 1;
+  border-radius: 20px;
+  padding: 14px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.65),
+              0 0 30px rgba(123, 44, 191, 0.5),
+              inset 0 0 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+}
+
+.class-photo-wrapper {
+  position: relative;
+  width: 100%;
+  height: 390px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #18092c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.class-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.class-photo-container:hover .class-photo-img {
+  transform: scale(1.02);
+}
+
+.class-photo-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #2a0845 0%, #170326 100%);
+  color: var(--accent-gold-light);
+  text-align: center;
+  padding: 30px;
+}
+
+.class-photo-placeholder.hidden {
+  display: none;
+}
+
+.placeholder-castle {
+  font-size: 3.8rem;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.6));
+}
+
+.placeholder-title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin-bottom: 8px;
+}
+
+.placeholder-desc {
+  font-size: 1.25rem;
+  color: #eeddff;
+  max-width: 550px;
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+
+.upload-photo-btn {
+  background: linear-gradient(135deg, #9b51e0, #7b2cbf);
+  color: #fff;
+  border: 1.5px solid var(--accent-gold);
+  padding: 10px 28px;
+  border-radius: 30px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(123, 44, 191, 0.6);
+  transition: all 0.3s ease;
+}
+
+.upload-photo-btn:hover {
+  background: linear-gradient(135deg, #b388ff, #9b51e0);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(255, 215, 0, 0.5);
+}
+
+.class-photo-caption {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 1.7rem;
+  color: var(--accent-gold);
+  letter-spacing: 1px;
+}
+
+/* ====================================================================
+   SECTION 3: SUSHI CONVEYOR BELT (BĂNG CHUYỀN ẢNH SUSHI)
+   ==================================================================== */
+.conveyor-section {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  margin-top: 15px;
+  margin-bottom: 50px;
+  padding: 25px 0 35px 0;
+  background: linear-gradient(180deg, rgba(15, 5, 29, 0) 0%, rgba(46, 8, 84, 0.5) 30%, rgba(46, 8, 84, 0.5) 70%, rgba(15, 5, 29, 0) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.conveyor-track-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 30px 0;
+}
+
+/* Glowing Sushi Track Rail */
+.conveyor-track-rail {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 18px;
+  background: linear-gradient(90deg, #1f0b38, #521c7a, #ffd700, #521c7a, #1f0b38);
+  background-size: 400px 100%;
+  transform: translateY(70px);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5), 0 5px 15px rgba(0, 0, 0, 0.8);
+  border-top: 2px solid var(--accent-gold);
+  border-bottom: 2px solid var(--accent-gold);
+  animation: railMove 3s linear infinite;
+  z-index: 1;
+}
+
+@keyframes railMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 400px 0; }
+}
+
+.conveyor-belt {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  animation: sushiScroll 48s linear infinite;
+  position: relative;
+  z-index: 2;
+  padding-left: 20px;
+}
+
+.conveyor-belt:hover {
+  animation-play-state: paused;
+}
+
+@keyframes sushiScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* 3D Sushi Plate Item */
+.sushi-plate-card {
+  width: 175px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+}
+
+.sushi-plate-card:hover {
+  transform: translateY(-22px) scale(1.1);
+  z-index: 10;
+}
+
+/* Đĩa Cô Tâm VIP */
+.sushi-plate-card.teacher-vip .sushi-avatar-frame {
+  border: 3px solid #fff;
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.9), 0 0 45px rgba(255, 117, 140, 0.8);
+}
+.sushi-plate-card.teacher-vip .sushi-name-tag {
+  background: linear-gradient(135deg, #ffd700, #ff758c);
+  color: #1a0836 !important;
+  font-weight: 700;
+  border-color: #fff;
+}
+.sushi-plate-card.teacher-vip .student-name {
+  color: #200438 !important;
+  font-weight: 700;
+}
+
+/* 3D Plate Stand */
+.sushi-dish-base {
+  position: absolute;
+  bottom: 0;
+  width: 155px;
+  height: 32px;
+  background: radial-gradient(ellipse at center, rgba(255, 215, 0, 0.45) 0%, rgba(123, 44, 191, 0.6) 60%, rgba(20, 5, 40, 0.9) 100%);
+  border-radius: 50%;
+  border: 1.5px solid var(--accent-gold);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.7), 0 0 20px rgba(255, 215, 0, 0.4);
+  z-index: 1;
+}
+
+/* Avatar Frame */
+.sushi-avatar-frame {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  padding: 5px;
+  background: linear-gradient(135deg, #ffd700, #ff758c, #8a2be2, #ffd700);
+  background-size: 200% 200%;
+  animation: rotateFrame 4s linear infinite;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.5);
+  position: relative;
+  z-index: 2;
+  margin-bottom: 8px;
+}
+
+@keyframes rotateFrame {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.sushi-avatar-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #2b0b4d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.sushi-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.sushi-plate-card:hover .sushi-avatar-img {
+  transform: scale(1.12);
+}
+
+.sushi-avatar-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+}
+
+.fallback-initials {
+  font-size: 2rem;
+  color: var(--accent-gold-light);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.fallback-crown {
+  font-size: 1.3rem;
+  margin-bottom: -2px;
+}
+
+/* Name Tag */
+.sushi-name-tag {
+  background: rgba(30, 8, 55, 0.95);
+  border: 1px solid var(--accent-gold);
+  border-radius: 18px;
+  padding: 4px 14px;
+  text-align: center;
+  margin-top: 5px;
+  z-index: 3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+}
+
+.sushi-name-tag .student-num {
+  font-size: 1.1rem;
+  color: var(--accent-gold);
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+.sushi-name-tag .student-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.sushi-plate-card:hover .sushi-name-tag {
+  background: linear-gradient(135deg, #7b2cbf, #2e0854);
+  border-color: #fff;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+}
+
+.conveyor-hint-text {
+  text-align: center;
+  color: #ecd9ff;
+  font-size: 1.25rem;
+  margin-top: 8px;
+}
+
+/* ====================================================================
+   SECTION 4: NAME SEARCH & ACTION
+   ==================================================================== */
+.gacha-section {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px 0 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gacha-box-container {
+  width: 100%;
+  background: linear-gradient(145deg, rgba(46, 8, 84, 0.85), rgba(20, 5, 38, 0.95));
+  border: 2px solid transparent;
+  border-image: linear-gradient(135deg, #ffd700, #ff758c, #9b51e0, #ffd700) 1;
+  border-radius: 26px;
+  padding: 38px 30px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7),
+              0 0 35px rgba(123, 44, 191, 0.5),
+              inset 0 0 25px rgba(255, 215, 0, 0.15);
+  backdrop-filter: blur(12px);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.gacha-sparkle-deco {
+  position: absolute;
+  font-size: 1.6rem;
+  color: var(--accent-gold);
+  opacity: 0.7;
+  animation: pulseDeco 2s infinite alternate;
+}
+.deco-1 { top: 15px; left: 20px; }
+.deco-2 { top: 15px; right: 20px; }
+.deco-3 { bottom: 15px; left: 20px; }
+.deco-4 { bottom: 15px; right: 20px; }
+
+@keyframes pulseDeco {
+  0% { transform: scale(0.8) rotate(0deg); opacity: 0.4; }
+  100% { transform: scale(1.2) rotate(15deg); opacity: 1; }
+}
+
+.gacha-prompt-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: var(--accent-gold-light);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+}
+
+.gacha-prompt-sub {
+  font-size: 1.45rem;
+  color: #eeddff;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.gacha-input-wrapper {
+  position: relative;
+  max-width: 540px;
+  margin: 0 auto 20px auto;
+}
+
+.name-search-input {
+  width: 100%;
+  padding: 14px 55px 14px 24px;
+  border-radius: 35px;
+  border: 2px solid rgba(255, 215, 0, 0.6);
+  background: rgba(18, 4, 34, 0.9);
+  color: #fff;
+  font-size: 1.4rem;
+  outline: none;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.7), 0 0 15px rgba(123, 44, 191, 0.4);
+  transition: all 0.3s ease;
+}
+
+.name-search-input:focus {
+  border-color: var(--accent-gold);
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.7), 0 0 25px rgba(255, 215, 0, 0.7);
+}
+
+.name-search-input::placeholder {
+  color: #a48bbd;
+  font-size: 1.25rem;
+}
+
+.input-clear-btn {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: none;
+}
+
+.input-clear-btn:hover {
+  color: var(--accent-gold);
+}
+
+/* Quick Select Pills */
+.quick-pills-label {
+  font-size: 1.3rem;
+  color: #d8c3ea;
+  margin-bottom: 12px;
+}
+
+.quick-pills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  max-height: 120px;
+  overflow-y: auto;
+  padding: 6px 4px;
+  margin-bottom: 28px;
+}
+
+.quick-pills-container::-webkit-scrollbar {
+  width: 4px;
+}
+.quick-pills-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 215, 0, 0.4);
+  border-radius: 4px;
+}
+
+.name-pill {
+  background: rgba(58, 14, 102, 0.7);
+  border: 1px solid rgba(255, 215, 0, 0.35);
+  color: #eeddff;
+  font-size: 1.2rem;
+  padding: 5px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.name-pill.teacher-pill {
+  background: linear-gradient(135deg, #ffd700, #ff758c);
+  color: #1a0836 !important;
+  font-weight: 700;
+  border-color: #fff;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+}
+
+.name-pill:hover, .name-pill.active {
+  background: linear-gradient(135deg, #7b2cbf, #ff758c);
+  color: #fff;
+  border-color: var(--accent-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(255, 215, 0, 0.4);
+}
+
+/* Action Button */
+.gacha-action-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-gacha-spin {
+  background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 40%, #ffd700 100%);
+  color: #210436;
+  border: none;
+  padding: 14px 42px;
+  border-radius: 35px;
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 8px 25px rgba(255, 117, 140, 0.5), 0 0 20px rgba(255, 215, 0, 0.6);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-gacha-spin:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 35px rgba(255, 117, 140, 0.8), 0 0 35px rgba(255, 215, 0, 0.9);
+}
+
+.gacha-error-msg {
+  color: #ff8fab;
+  font-size: 1.25rem;
+  margin-top: 15px;
+  display: none;
+  animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-8px); }
+  70% { transform: translateX(8px); }
+}
+
+/* ====================================================================
+   MODAL 1: REEL SPINNING THEATRE (HIỆU ỨNG XOAY MỞ THIỆP)
+   ==================================================================== */
+.gacha-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(8, 2, 18, 0.92);
+  backdrop-filter: blur(15px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.gacha-modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.gacha-theatre {
+  width: 90%;
+  max-width: 580px;
+  background: radial-gradient(circle at center, #320c57 0%, #150328 100%);
+  border: 3px solid var(--accent-gold);
+  border-radius: 28px;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 60px rgba(255, 215, 0, 0.4), 0 0 100px rgba(123, 44, 191, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gacha-theatre-title {
+  font-size: 2.1rem;
+  color: var(--accent-gold);
+  margin-bottom: 18px;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+}
+
+/* 3D Slot Machine Reel Box */
+.slot-machine-frame {
+  width: 280px;
+  height: 280px;
+  border-radius: 20px;
+  border: 4px solid var(--accent-gold);
+  background: #110221;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.9), 0 0 30px rgba(255, 215, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  margin: 10px 0 25px 0;
+}
+
+/* Light beams behind slot */
+.light-rays {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  transform: translate(-50%, -50%);
+  background: conic-gradient(from 0deg, transparent 0deg 20deg, rgba(255, 215, 0, 0.25) 20deg 40deg, transparent 40deg 60deg, rgba(255, 215, 0, 0.25) 60deg 80deg, transparent 80deg 100deg, rgba(255, 215, 0, 0.25) 100deg 120deg, transparent 120deg 140deg, rgba(255, 215, 0, 0.25) 140deg 160deg, transparent 160deg 180deg, rgba(255, 215, 0, 0.25) 180deg 200deg, transparent 200deg 220deg, rgba(255, 215, 0, 0.25) 220deg 240deg, transparent 240deg 260deg, rgba(255, 215, 0, 0.25) 260deg 280deg, transparent 280deg 300deg, rgba(255, 215, 0, 0.25) 30deg 320deg, transparent 320deg 340deg, rgba(255, 215, 0, 0.25) 340deg 360deg);
+  animation: spinRays 12s linear infinite;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.light-rays.active {
+  opacity: 1;
+}
+
+@keyframes spinRays {
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Slot Reel Strip */
+.slot-reel-strip {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.1s linear;
+}
+
+/* Individual Slot Item */
+.slot-item {
+  width: 280px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.slot-item-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid var(--accent-gold);
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+  margin-bottom: 12px;
+}
+
+.slot-item-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slot-item-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.slot-item-title {
+  font-size: 1.2rem;
+  color: var(--accent-gold);
+  margin-top: 4px;
+}
+
+.gacha-status-text {
+  font-size: 1.55rem;
+  font-weight: 600;
+  color: var(--accent-gold-light);
+  min-height: 40px;
+  letter-spacing: 1px;
+}
+
+/* ====================================================================
+   MODAL 2: ROYAL LONG SCROLL LETTER (TẤM THIỆP THƯ DÀI KÉO XUỐNG)
+   ==================================================================== */
+.letter-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 1, 12, 0.94);
+  backdrop-filter: blur(12px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  padding: 20px;
+}
+
+.letter-modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* The Royal Scroll Container */
+.royal-scroll-container {
+  width: 100%;
+  max-width: 680px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  animation: unrollLetter 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes unrollLetter {
+  0% { transform: scale(0.6) rotate(-3deg); opacity: 0; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+/* Top and Bottom Scroll Rods */
+.scroll-rod {
+  width: 106%;
+  margin-left: -3%;
+  height: 26px;
+  background: linear-gradient(180deg, #d4af37, #ffd700, #aa820a, #4a3400);
+  border-radius: 13px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.8), 0 0 15px rgba(255, 215, 0, 0.6);
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+}
+
+.rod-knob {
+  width: 24px;
+  height: 24px;
+  background: radial-gradient(circle, #fff, #ffd700, #855800);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+}
+
+/* Scrollable Long Parchment Paper */
+.parchment-scroll-body {
+  width: 100%;
+  background-color: #fcf7e6;
+  background-image: radial-gradient(#eadbb6 1px, transparent 1px),
+                    linear-gradient(to bottom, #fbf4df, #faeed0 50%, #f7e6be);
+  background-size: 20px 20px, 100% 100%;
+  border-left: 6px solid #d4af37;
+  border-right: 6px solid #d4af37;
+  box-shadow: inset 0 0 50px rgba(160, 110, 40, 0.35),
+              0 15px 40px rgba(0, 0, 0, 0.8);
+  overflow-y: auto;
+  max-height: calc(90vh - 52px);
+  padding: 40px 35px 50px 35px;
+  color: #3b2313;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar styling for parchment */
+.parchment-scroll-body::-webkit-scrollbar {
+  width: 8px;
+}
+.parchment-scroll-body::-webkit-scrollbar-track {
+  background: #ebd8af;
+}
+.parchment-scroll-body::-webkit-scrollbar-thumb {
+  background: #b5893a;
+  border-radius: 4px;
+}
+
+/* Close button on scroll */
+.btn-close-scroll {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  background: #8b1e1e;
+  border: 2px solid #ffd700;
+  color: #fff;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease;
+  z-index: 15;
+}
+
+.btn-close-scroll:hover {
+  transform: scale(1.12);
+  background: #b82525;
+}
+
+/* Royal Wax Seal Stamp */
+.wax-seal {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  width: 58px;
+  height: 58px;
+  background: radial-gradient(circle, #b71c1c, #7f0000);
+  border-radius: 50%;
+  border: 3px dashed #e57373;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffcdd2;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.1;
+  transform: rotate(-12deg);
+}
+
+/* Scroll Header */
+.letter-header {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.letter-crown-badge {
+  font-size: 2.8rem;
+  color: #b8860b;
+  margin-bottom: 5px;
+}
+
+.letter-to-title {
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  color: #7b4b1a;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.letter-recipient-name {
+  font-size: 3.5rem;
+  color: #7b1fa2;
+  font-weight: 700;
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(123, 31, 162, 0.2);
+}
+
+.letter-special-title {
+  display: inline-block;
+  background: #f3e5ab;
+  border: 1px solid #d4af37;
+  color: #6d4c41;
+  font-size: 1.35rem;
+  font-weight: 600;
+  padding: 4px 18px;
+  border-radius: 18px;
+  margin-top: 5px;
+}
+
+/* Royal Divider */
+.scroll-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 22px 0;
+}
+
+.divider-vine {
+  height: 2px;
+  flex: 1;
+  background: linear-gradient(90deg, transparent, #b8860b, transparent);
+}
+
+.divider-flower {
+  color: #b8860b;
+  font-size: 1.4rem;
+}
+
+/* Handwritten Wish Content */
+.letter-wish-box {
+  margin: 25px 0 35px 0;
+  padding: 10px 15px;
+  position: relative;
+}
+
+.letter-wish-text {
+  font-size: 2.2rem;
+  line-height: 1.75;
+  color: #2c1a0e;
+  text-align: justify;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.letter-signoff {
+  margin-top: 32px;
+  text-align: right;
+  font-size: 2.1rem;
+  color: #7b1fa2;
+  font-weight: 600;
+}
+
+.letter-signoff-sub {
+  font-size: 1.35rem;
+  color: #8d6e63;
+  margin-top: 4px;
+}
+
+/* ====================================================================
+   SCROLLABLE PHOTO SECTION INSIDE THE LONG LETTER
+   ==================================================================== */
+.letter-photo-section {
+  margin-top: 35px;
+  padding-top: 30px;
+  border-top: 2px dashed #d7ccc8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.letter-photo-heading {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #5d4037;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+.letter-scroll-hint {
+  font-size: 1.2rem;
+  color: #8d6e63;
+  font-style: italic;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* 3D Ornate Golden Photo Frame for the Specific Girl / Teacher */
+.letter-girl-photo-frame {
+  width: 100%;
+  max-width: 420px;
+  height: 480px;
+  background: #ffffff;
+  border: 12px solid #f3e5ab;
+  outline: 4px solid #b8860b;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4),
+              inset 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.letter-girl-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.letter-girl-photo-frame:hover .letter-girl-img {
+  transform: scale(1.03);
+}
+
+/* Fallback card if real photo isn't provided yet */
+.letter-girl-avatar-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  text-align: center;
+  color: #fff;
+}
+
+.letter-fallback-tiara {
+  font-size: 4.8rem;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+  margin-bottom: 10px;
+}
+
+.letter-fallback-name {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.letter-fallback-badge {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 5px 20px;
+  border-radius: 20px;
+  margin-top: 10px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.letter-photo-caption {
+  font-size: 1.85rem;
+  color: #6a1b9a;
+  margin-top: 18px;
+  font-weight: 600;
+}
+
+/* ====================================================================
+   FOOTER
+   ==================================================================== */
+.footer-section {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  font-size: 1.45rem;
+  color: #b39ddb;
+  border-top: 1px solid rgba(255, 215, 0, 0.2);
+  width: 100%;
+}
+
+.footer-section p {
+  margin: 5px 0;
+}
+
+/* ====================================================================
+   RESPONSIVE DESIGN CHO ĐIỆN THOẠI & MÁY TÍNH BẢNG
+   ==================================================================== */
+
+/* Tablet & Mobile Landscape (<= 768px) */
+@media (max-width: 768px) {
+  .disney-corner {
+    width: 70px;
+    height: 70px;
+  }
+  .main-wrapper {
+    padding: 20px 14px 60px 14px;
+  }
+  .disney-handwriting-title {
+    font-size: 2.9rem;
+    line-height: 1.3;
+  }
+  .magic-wand-tip {
+    font-size: 1.8rem;
+  }
+  .intro-subtitle {
+    font-size: 1.35rem;
+  }
+  .intro-date-badge {
+    font-size: 1.15rem;
+    padding: 5px 18px;
+  }
+  .class-photo-wrapper {
+    height: 260px;
+  }
+  .royal-section-title {
+    font-size: 1.7rem;
+  }
+  .sushi-plate-card {
+    width: 150px;
+  }
+  .sushi-avatar-frame {
+    width: 115px;
+    height: 115px;
+  }
+  .sushi-dish-base {
+    width: 135px;
+  }
+  .sushi-name-tag .student-name {
+    font-size: 1.15rem;
+  }
+  .gacha-box-container {
+    padding: 28px 18px;
+  }
+  .gacha-prompt-title {
+    font-size: 2rem;
+  }
+  .gacha-prompt-sub {
+    font-size: 1.3rem;
+  }
+  .name-search-input {
+    font-size: 1.25rem;
+    padding: 12px 45px 12px 18px;
+  }
+  .btn-gacha-spin {
+    padding: 12px 30px;
+    font-size: 1.3rem;
+  }
+  .slot-machine-frame {
+    width: 230px;
+    height: 230px;
+  }
+  .slot-item {
+    width: 230px;
+    height: 230px;
+    padding: 10px;
+  }
+  .slot-item-avatar {
+    width: 115px;
+    height: 115px;
+  }
+  .parchment-scroll-body {
+    padding: 30px 18px;
+  }
+  .letter-recipient-name {
+    font-size: 2.7rem;
+  }
+  .letter-wish-text {
+    font-size: 1.85rem;
+    line-height: 1.65;
+  }
+  .letter-girl-photo-frame {
+    max-width: 100%;
+    height: 380px;
+  }
+}
+
+/* Smartphone Portrait (<= 480px) */
+@media (max-width: 480px) {
+  /* Thu nhỏ hoa văn góc trên màn hình điện thoại để không che nội dung */
+  .disney-corner {
+    width: 48px;
+    height: 48px;
+    opacity: 0.7;
+  }
+  .disney-corner.top-left { top: 5px; left: 5px; }
+  .disney-corner.top-right { top: 5px; right: 5px; }
+  .disney-corner.bottom-left { bottom: 5px; left: 5px; }
+  .disney-corner.bottom-right { bottom: 5px; right: 5px; }
+
+  .main-wrapper {
+    padding: 12px 10px 50px 10px;
+  }
+
+  /* Intro trên điện thoại */
+  .intro-section {
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+  .disney-header-sparkle-arc {
+    height: 35px;
+    margin-bottom: 15px;
+  }
+  .shooting-arc-svg {
+    width: 220px;
+    height: 40px;
+  }
+  .intro-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  .disney-handwriting-title {
+    font-size: 2.25rem;
+    line-height: 1.3;
+    margin: 8px 0 12px 0;
+  }
+  .magic-wand-tip {
+    font-size: 1.5rem;
+    margin-left: 3px;
+  }
+  .intro-date-badge {
+    font-size: 1.05rem;
+    padding: 4px 14px;
+    gap: 6px;
+  }
+
+  /* Ảnh tập thể lớp */
+  .class-photo-section {
+    margin: 20px 0 35px 0;
+  }
+  .royal-section-title {
+    font-size: 1.45rem;
+    text-align: center;
+  }
+  .gold-line {
+    width: 35px;
+  }
+  .class-photo-container {
+    padding: 8px;
+    border-radius: 14px;
+  }
+  .class-photo-wrapper {
+    height: 205px;
+    border-radius: 10px;
+  }
+  .class-photo-caption {
+    font-size: 1.25rem;
+    margin-top: 8px;
+  }
+  .placeholder-title {
+    font-size: 1.35rem;
+  }
+  .placeholder-desc {
+    font-size: 1.05rem;
+  }
+  .upload-photo-btn {
+    font-size: 1.05rem;
+    padding: 7px 18px;
+  }
+
+  /* Băng chuyền Sushi trên điện thoại */
+  .conveyor-section {
+    margin-top: 10px;
+    margin-bottom: 35px;
+    padding: 15px 0 25px 0;
+  }
+  .conveyor-belt {
+    gap: 18px;
+    padding-left: 10px;
+  }
+  .sushi-plate-card {
+    width: 130px;
+  }
+  .sushi-avatar-frame {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 6px;
+  }
+  .sushi-dish-base {
+    width: 115px;
+    height: 25px;
+  }
+  .sushi-name-tag {
+    padding: 3px 10px;
+    border-radius: 14px;
+  }
+  .sushi-name-tag .student-num {
+    font-size: 0.95rem;
+  }
+  .sushi-name-tag .student-name {
+    font-size: 1.05rem;
+  }
+  .conveyor-hint-text {
+    font-size: 1.05rem;
+    padding: 0 10px;
+  }
+
+  /* Ô nhập họ tên trên điện thoại */
+  .gacha-section {
+    margin: 10px 0 45px 0;
+  }
+  .gacha-box-container {
+    padding: 22px 14px;
+    border-radius: 20px;
+  }
+  .gacha-prompt-title {
+    font-size: 1.75rem;
+  }
+  .gacha-prompt-sub {
+    font-size: 1.15rem;
+    margin-bottom: 18px;
+  }
+  .name-search-input {
+    font-size: 1.15rem;
+    padding: 11px 40px 11px 16px;
+  }
+  .quick-pills-label {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+  .quick-pills-container {
+    gap: 6px;
+    max-height: 115px;
+    margin-bottom: 20px;
+  }
+  .name-pill {
+    font-size: 1.02rem;
+    padding: 4px 10px;
+    border-radius: 16px;
+  }
+  .btn-gacha-spin {
+    font-size: 1.2rem;
+    padding: 12px 22px;
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+
+  /* Modal xoay mở thiệp trên điện thoại */
+  .gacha-theatre {
+    width: 94%;
+    padding: 20px 12px;
+    border-radius: 20px;
+  }
+  .gacha-theatre-title {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+  }
+  .slot-machine-frame {
+    width: 190px;
+    height: 190px;
+    margin: 6px 0 18px 0;
+    border-radius: 16px;
+  }
+  .slot-item {
+    width: 190px;
+    height: 190px;
+    padding: 8px;
+  }
+  .slot-item-avatar {
+    width: 95px;
+    height: 95px;
+    margin-bottom: 8px;
+  }
+  .slot-item-name {
+    font-size: 1.35rem;
+  }
+  .slot-item-title {
+    font-size: 1.02rem;
+  }
+  .gacha-status-text {
+    font-size: 1.25rem;
+  }
+
+  /* Modal bức thư cuộn dài trên điện thoại */
+  .letter-modal-overlay {
+    padding: 8px;
+  }
+  .royal-scroll-container {
+    max-height: 95vh;
+  }
+  .scroll-rod {
+    height: 20px;
+  }
+  .rod-knob {
+    width: 18px;
+    height: 18px;
+  }
+  .parchment-scroll-body {
+    padding: 24px 12px 35px 12px;
+    max-height: calc(95vh - 40px);
+    border-left-width: 4px;
+    border-right-width: 4px;
+  }
+  .wax-seal {
+    width: 42px;
+    height: 42px;
+    font-size: 0.72rem;
+    top: 10px;
+    left: 10px;
+  }
+  .btn-close-scroll {
+    width: 32px;
+    height: 32px;
+    font-size: 1.1rem;
+    top: 10px;
+    right: 10px;
+  }
+  .letter-header {
+    margin-top: 12px;
+    margin-bottom: 15px;
+  }
+  .letter-crown-badge {
+    font-size: 2.2rem;
+  }
+  .letter-to-title {
+    font-size: 1.15rem;
+  }
+  .letter-recipient-name {
+    font-size: 2.35rem;
+  }
+  .letter-special-title {
+    font-size: 1.1rem;
+    padding: 3px 12px;
+  }
+  .letter-wish-box {
+    margin: 15px 0 25px 0;
+    padding: 4px 6px;
+  }
+  .letter-wish-text {
+    font-size: 1.55rem;
+    line-height: 1.58;
+  }
+  .letter-signoff {
+    font-size: 1.65rem;
+    margin-top: 22px;
+  }
+  .letter-signoff-sub {
+    font-size: 1.15rem;
+  }
+  .letter-photo-section {
+    margin-top: 22px;
+    padding-top: 20px;
+  }
+  .letter-photo-heading {
+    font-size: 1.35rem;
+  }
+  .letter-scroll-hint {
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+  }
+  .letter-girl-photo-frame {
+    max-width: 100%;
+    height: 340px;
+    border-width: 7px;
+  }
+  .letter-photo-caption {
+    font-size: 1.45rem;
+    margin-top: 12px;
+  }
+  .footer-section {
+    font-size: 1.15rem;
+    padding: 15px 10px;
+  }
+}

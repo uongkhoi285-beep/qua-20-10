@@ -1,0 +1,23 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gradTeacher" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd700" />
+      <stop offset="50%" stop-color="#ff758c" />
+      <stop offset="100%" stop-color="#8a2be2" />
+    </linearGradient>
+    <radialGradient id="sparkleT" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#gradTeacher)" />
+  <circle cx="200" cy="200" r="165" fill="none" stroke="#fff2a6" stroke-width="5" stroke-dasharray="10 6"/>
+  <circle cx="200" cy="200" r="148" fill="rgba(255, 255, 255, 0.28)" />
+  <text x="200" y="160" font-size="80" text-anchor="middle" dominant-baseline="middle">💐👑❤️</text>
+  <text x="200" y="240" font-family="'Cinzel', 'Playfair Display', serif" font-size="30" font-weight="bold" fill="#2b0040" text-anchor="middle" dominant-baseline="middle">Cô Tâm</text>
+  <text x="200" y="278" font-family="'Quicksand', sans-serif" font-size="16" font-weight="bold" fill="#4a0072" text-anchor="middle" dominant-baseline="middle">GVCN A3K33 Kính Yêu</text>
+  <circle cx="70" cy="80" r="18" fill="url(#sparkleT)"/>
+  <circle cx="330" cy="90" r="15" fill="url(#sparkleT)"/>
+  <circle cx="80" cy="320" r="14" fill="url(#sparkleT)"/>
+  <circle cx="320" cy="310" r="18" fill="url(#sparkleT)"/>
+</svg>

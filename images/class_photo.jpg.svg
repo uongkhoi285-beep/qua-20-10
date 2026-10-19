@@ -1,0 +1,20 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f0938" />
+      <stop offset="50%" stop-color="#3c096c" />
+      <stop offset="100%" stop-color="#150228" />
+    </linearGradient>
+    <radialGradient id="goldGlow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#ffd700" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffd700" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1000" height="500" fill="url(#bgGrad)" />
+  <rect width="1000" height="500" fill="url(#goldGlow)" />
+  <rect x="25" y="25" width="950" height="450" fill="none" stroke="#ffd700" stroke-width="3" stroke-dasharray="12 8" rx="15"/>
+  <text x="500" y="160" font-size="80" text-anchor="middle" dominant-baseline="middle">🏰👑✨</text>
+  <text x="500" y="260" font-family="'Cinzel', serif" font-size="44" font-weight="bold" fill="#fff2a6" text-anchor="middle">TẬP THỂ LỚP A3K33</text>
+  <text x="500" y="320" font-family="'Great Vibes', cursive" font-size="34" fill="#ffd700" text-anchor="middle">Chào Mừng Ngày Phụ Nữ Việt Nam 20/10</text>
+  <text x="500" y="380" font-family="'Quicksand', sans-serif" font-size="18" fill="#e0c3fc" text-anchor="middle">★ Vị trí dành riêng cho bức ảnh kỷ niệm thanh xuân của tập thể lớp ★</text>
+</svg>
